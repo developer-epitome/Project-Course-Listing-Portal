@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Details</title>
+</head>
+<body>
+
+<%- include("partials/navbar") %>
+
+<h1><%= course.name %></h1>
+<p><strong>Duration:</strong> <%= course.duration %></p>
+<p><strong>Fees:</strong> ₹<%= course.fees %></p>
+
+<a href="/courses">⬅ Back to Courses</a>
+
+<%- include("partials/footer") %>
+
+</body>
+</html>

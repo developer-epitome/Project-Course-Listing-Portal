@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses</title>
+</head>
+<body>
+
+<%- include("partials/navbar") %>
+
+<h1>All Courses</h1>
+
+<ul>
+    <% courses.forEach(course => { %>
+        <li>
+            <h3><%= course.name %></h3>
+            <p>Duration: <%= course.duration %></p>
+            <p>Fees: ₹<%= course.fees %></p>
+
+            <a href="/course/<%= course.id %>">
+                View Details
+            </a>
+            <hr>
+        </li>
+    <% }) %>
+</ul>
+
+<%- include("partials/footer") %>
+
+</body>
+</html>
